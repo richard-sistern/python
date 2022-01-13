@@ -1,8 +1,8 @@
 # Get the load details
-money_owed = float ( input ("How much do you owe?\n" ) )
-apr = float ( input ( "What is the percentage rate?\n" ) )
-payment = float ( input ( "What will the monthly payments be?\n" ) )
-months = int ( input ( "How many months to display results for?\n" ) )
+money_owed = float(input("How much do you owe?\n"))
+apr = float (input("What is the percentage rate?\n"))
+payment = float(input("What will the monthly payments be?\n"))
+months = int(input("How many months to display results for?\n"))
 
 # Divide APR by 100 to make %, then divide by 12 to make monthly
 monthly_rate = apr/100/12
@@ -12,7 +12,7 @@ for i in range(months):
     interest_paid = money_owed * monthly_rate
     money_owed = money_owed + interest_paid
 
-    if (money_owed -payment < 0):
+    if (money_owed - payment < 0):
         print("The last payment is", money_owed)
         print("You paid off the loan in", i+1, "months")
         break
